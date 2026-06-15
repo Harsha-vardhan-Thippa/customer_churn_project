@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Approval Prediction</title>
+</head>
+<body>
+    <h2>Customer Approval Prediction</h2>
+
+    <form method="POST">
+        Tenure: <input type="number" name="tenure" required><br><br>
+        Total Charges: <input type="number" name="total_charges" required><br><br>
+
+        Gender:
+        <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select><br><br>
+
+        Partner:
+        <select name="partner">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        Dependents:
+        <select name="dependents">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        Phone Service:
+        <select name="phone">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        Multiple Lines:
+        <select name="multiple_lines">
+            <option>No phone service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Internet Service:
+        <select name="internet">
+            <option>DSL</option>
+            <option>Fiber optic</option>
+            <option>No</option>
+        </select><br><br>
+
+        Paperless Billing:
+        <select name="paperless">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        Payment Method:
+        <select name="payment">
+            <option>Credit card (automatic)</option>
+            <option>Electronic check</option>
+            <option>Mailed check</option>
+        </select><br><br>
+
+        Online Security:
+        <select name="online_security">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Online Backup:
+        <select name="online_backup">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Device Protection:
+        <select name="device_protection">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Tech Support:
+        <select name="tech_support">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Streaming TV:
+        <select name="stream_tv">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Streaming Movies:
+        <select name="stream_movies">
+            <option>No internet service</option>
+            <option>No</option>
+            <option>Yes</option>
+        </select><br><br>
+
+        Contract:
+        <select name="contract">
+            <option>Month-to-month</option>
+            <option>One year</option>
+            <option>Two year</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Result: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
